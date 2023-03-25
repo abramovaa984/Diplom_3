@@ -1,5 +1,6 @@
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import pageObject.BuilderPage;
 import pageObject.PersonalDataPage;
 
@@ -20,6 +21,7 @@ public class TestFromPersonalAreaMain extends TestMain {
         personalDataPage.clickLoginAccountBottom();
         personalDataPage.clickBuilderBottom();
         BuilderPage builderPage = new BuilderPage(webDriver);
+        webDriver.findElement(By.xpath("//*[@id=\"root\"]/div/header/nav/ul/li[1]/a")).isDisplayed();
     }
 
     @Test
@@ -29,6 +31,7 @@ public class TestFromPersonalAreaMain extends TestMain {
         personalDataPage.clickLoginAccountBottom();
         personalDataPage.clickLogo();
         BuilderPage builderPage = new BuilderPage(webDriver);
+        webDriver.findElement(By.xpath("//*[@id=\"root\"]/div/header/nav/div")).isDisplayed();
     }
 
 }

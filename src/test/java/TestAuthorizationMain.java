@@ -39,6 +39,7 @@ public class TestAuthorizationMain extends TestMain {
         authorizationPage.setEmailField(createUser.getEmail());
         authorizationPage.setPasswordField(createUser.getPassword());
         authorizationPage.clickLoginBottom();
+        webDriver.get(personalDataPage.MAIN_URL);
     }
 
     @Test
@@ -48,6 +49,7 @@ public class TestAuthorizationMain extends TestMain {
         authorizationPage.setEmailField(createUser.getEmail());
         authorizationPage.setPasswordField(createUser.getPassword());
         authorizationPage.clickLoginBottom();
+        webDriver.get(personalDataPage.MAIN_URL);
     }
 
     @Test
@@ -59,6 +61,7 @@ public class TestAuthorizationMain extends TestMain {
         authorizationPage.setEmailField(createUser.getEmail());
         authorizationPage.setPasswordField(createUser.getPassword());
         authorizationPage.clickLoginBottom();
+        webDriver.get(personalDataPage.MAIN_URL);
     }
 
     @Test
@@ -70,6 +73,7 @@ public class TestAuthorizationMain extends TestMain {
         authorizationPage.setEmailField(createUser.getEmail());
         authorizationPage.setPasswordField(createUser.getPassword());
         authorizationPage.clickLoginBottom();
+        webDriver.get(personalDataPage.MAIN_URL);
     }
 
     @After
