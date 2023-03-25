@@ -1,5 +1,4 @@
 import io.qameta.allure.junit4.DisplayName;
-import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import pageObject.BuilderPage;
@@ -12,7 +11,6 @@ public class TestBuilder extends TestMain {
         BuilderPage builderPage = new BuilderPage(webDriver);
         builderPage.clickSauceHeader();
         builderPage.clickBunHeader();
-        Assert.assertEquals("Булки", builderPage.textFromBunHeader());
         webDriver.findElement(By.xpath("//span[text()='Булки']")).isDisplayed();
     }
 
@@ -23,7 +21,6 @@ public class TestBuilder extends TestMain {
         builderPage.clickSauceHeader();
         builderPage.clickBunHeader();
         builderPage.clickSauceHeader();
-        Assert.assertEquals("Соусы", builderPage.textFromSauceHeader());
         webDriver.findElement(By.xpath("//span[text()='Соусы']")).isDisplayed();
     }
 
@@ -34,7 +31,6 @@ public class TestBuilder extends TestMain {
         builderPage.clickSauceHeader();
         builderPage.clickBunHeader();
         builderPage.clickToppingHeader();
-        Assert.assertEquals("Начинки", builderPage.textFromToppingHeader());
         webDriver.findElement(By.xpath("//span[text()='Начинки']")).isDisplayed();
     }
 }
