@@ -7,13 +7,13 @@ import org.openqa.selenium.WebDriver;
 public class PersonalDataPage extends MainPage {
 
     public final String MAIN_URL = "https://stellarburgers.nomoreparties.site/";
-    private final By loginAccountButton = By.xpath("//button[text()='Войти в аккаунт']");
-    private final By loginBottom = By.xpath(".//button[(text()='Войти')]");
-    private final By emailField = By.xpath("//input[@name='name']");
-    private final By passwordField = By.xpath("//input[@name='Пароль']");
-    private final By entryHeader = By.xpath("//h2[text()='Вход']");
-    private final By builderBottom = By.linkText("Конструктор");
-    private final By stellarBurgerLogo = By.className("AppHeader_header__logo__2D0X2");
+    public final By loginAccountButton = By.xpath("//button[text()='Войти в аккаунт']");
+    public final By loginBottom = By.xpath(".//button[(text()='Войти')]");
+    public final By emailField = By.xpath("//input[@name='name']");
+    public final By passwordField = By.xpath("//input[@name='Пароль']");
+    public final By entryHeader = By.xpath("//h2[text()='Вход']");
+    public final By builderBottom = By.xpath(".//p[contains(text(),\"Конструктор\")]");
+    public final By logoButton = By.xpath("//*[@id=\"root\"]/div/header/nav/div/a");
 
     public PersonalDataPage(WebDriver webDriver) {
         super(webDriver);
@@ -23,17 +23,11 @@ public class PersonalDataPage extends MainPage {
         webDriver.get(MAIN_URL);
     }
 
-    public void clickLoginBottom() {
-        webDriver.findElement(loginBottom).click();
-    }
 
     public void clickLoginAccountBottom() {
         webDriver.findElement(loginAccountButton).click();
     }
 
-    public void clickLogo() {
-        webDriver.findElement(stellarBurgerLogo).click();
-    }
 
     public void clickBuilderBottom() {
         webDriver.findElement(builderBottom).click();
@@ -49,5 +43,13 @@ public class PersonalDataPage extends MainPage {
 
     public void checkEntryHeaderIsDisplayed() {
         Assert.assertTrue(webDriver.findElement(entryHeader).isDisplayed());
+    }
+
+    public void checkIfBuilderIsClicable() {
+        Assert.assertTrue(webDriver.findElement(builderBottom).isDisplayed());
+    }
+
+    public void checkIfLogoIsClicable() {
+        Assert.assertTrue(webDriver.findElement(logoButton).isDisplayed());
     }
 }

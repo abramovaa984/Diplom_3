@@ -8,8 +8,8 @@ import pageObject.AuthorizationPage;
 import pageObject.BuilderPage;
 import pageObject.PersonalDataPage;
 import pageObject.RegistrationPage;
-import user.UserAuthorization;
 import user.CreateUser;
+import user.UserAuthorization;
 
 import static user.CreateUser.getUserCredentials;
 
@@ -39,7 +39,7 @@ public class TestAuthorizationMain extends TestMain {
         authorizationPage.setEmailField(createUser.getEmail());
         authorizationPage.setPasswordField(createUser.getPassword());
         authorizationPage.clickLoginBottom();
-        webDriver.get(personalDataPage.MAIN_URL);
+        builderPage.checkMakeOrderIsDisplayed();
     }
 
     @Test
@@ -49,7 +49,7 @@ public class TestAuthorizationMain extends TestMain {
         authorizationPage.setEmailField(createUser.getEmail());
         authorizationPage.setPasswordField(createUser.getPassword());
         authorizationPage.clickLoginBottom();
-        webDriver.get(personalDataPage.MAIN_URL);
+        builderPage.checkMakeOrderIsDisplayed();
     }
 
     @Test
@@ -61,7 +61,7 @@ public class TestAuthorizationMain extends TestMain {
         authorizationPage.setEmailField(createUser.getEmail());
         authorizationPage.setPasswordField(createUser.getPassword());
         authorizationPage.clickLoginBottom();
-        webDriver.get(personalDataPage.MAIN_URL);
+        builderPage.checkMakeOrderIsDisplayed();
     }
 
     @Test
@@ -73,7 +73,7 @@ public class TestAuthorizationMain extends TestMain {
         authorizationPage.setEmailField(createUser.getEmail());
         authorizationPage.setPasswordField(createUser.getPassword());
         authorizationPage.clickLoginBottom();
-        webDriver.get(personalDataPage.MAIN_URL);
+        builderPage.checkMakeOrderIsDisplayed();
     }
 
     @After
